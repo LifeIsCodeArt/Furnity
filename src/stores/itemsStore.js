@@ -5,59 +5,59 @@ export const useCollectionItemsStore = defineStore('CollectionItemsStore', () =>
     const chairCollectionItems = ref([
         {
             id:1,
-            label: 'Blue chair',
-            imageLink: '../src/assets/images/Items%20Collection/item_1.svg',
-            currentPrice: '25.00$',
-            oldPrice: ""
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_1.png',
+            price: '25',
         },
         {
             id:2,
-            label: 'Blue chair',
-            imageLink: '../src/assets/images/Items%20Collection/item_2.svg',
-            currentPrice: '25.00$',
-            oldPrice: '45.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_2.png',
+            price: '25',
         },
         {
             id:3,
-            label: 'Coral vase',
-            imageLink: '../src/assets/images/Items%20Collection/item_3.svg',
-            currentPrice: '75.00$',
-            oldPrice: '115.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_3.png',
+            price: '75',
         },
         {
             id:4,
-            label: 'Coffee table set',
-            imageLink: '../src/assets/images/Items%20Collection/item_4.svg',
-            currentPrice: '15.00$',
-            oldPrice: '15.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_4.png',
+            price: '15',
         },
         {
             id:5,
-            label: 'Decorative vase',
-            imageLink: '../src/assets/images/Items%20Collection/item_5.svg',
-            currentPrice: '15.00$',
-            oldPrice: '15.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_5.png',
+            price: '2215'
         },
         {
             id:6,
-            label: 'Coral vase',
-            imageLink: '../src/assets/images/Items%20Collection/item_6.svg',
-            currentPrice: '15.00$',
-            oldPrice: '15.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_6.png',
+            price: '15',
         },
         {
             id:7,
-            label: 'Gray sofa',
-            imageLink: '../src/assets/images/Items%20Collection/item_7.svg',
-            currentPrice: '15.00$',
-            oldPrice: '15.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_7.png',
+            price: '15',
         },
         {
             id:8,
-            label: 'Black chair',
-            imageLink: '../src/assets/images/Items%20Collection/item_8.svg',
-            currentPrice: '15.00$',
-            oldPrice: '15.00$'
+            label: 'Chair',
+            text: 'Sakarias Armchair',
+            imageLink: '/src/assets/images/Chair%20Collection/chair_8.png',
+            price: '15',
         },
     ])
 
@@ -87,5 +87,33 @@ export const useCollectionItemsStore = defineStore('CollectionItemsStore', () =>
             text: 'The price of the products we offer is very in accordance with the quality of the goods',
         }
     ])
-    return {chairCollectionItems, benefitsCollection}
+
+    const menuTags = ref([
+        {
+            id:1,
+            label: 'Badroom',
+        },
+        {
+            id:2,
+            label: 'Living Room',
+        },
+        {
+            id:3,
+            label: 'Dining Room',
+        },
+        {
+            id:4,
+            label: 'Office',
+        },
+        {
+            id:5,
+            label: 'Kitchen'
+        },
+        {
+            id:6,
+            label: 'Sofa'
+        }
+    ])
+
+    return {chairCollectionItems,benefitsCollection,menuTags}
 })
