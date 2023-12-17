@@ -10,8 +10,8 @@ const items = computed(()=> store.MenuItems)
 
 <template>
 
-  <div class="margin min-w-[90rem] max-xl:min-w-[64rem] max-sm:min-w-[39rem]">
-    <div class="bg-inherit container w-[90rem] px-[7.5rem] flex items-center justify-between max-xl:min-w-[64rem] max-xl:px-2 max-sm:w-0 max-sm:min-w-[38.87rem]">
+  <div class="margin min-w-[90rem] max-xl:min-w-[69rem] max-lg:min-w-[39rem] max-sm:min-w-[39rem] border border-green-400">
+    <div class="bg-inherit container w-[90rem] px-[7.5rem] flex items-center justify-between max-xl:min-w-[68rem] max-lg:min-w-[38.87rem] max-xl:px-[2.5rem] 2xl:px-[7.5rem] max-md:px-0  max-sm:w-0 max-sm:min-w-[38.87rem]">
         <div class="flex justify-center items-center">
             <img src="@/assets/icons/Ellipse.png" alt="" class="mr-[0.5rem] w-[2.09rem] h-[1.125rem]">
             <p class="text-[1.125rem] text-[#1D1F23] leading-[3.75rem] tracking-[0.035rem] font-oswald">Furnity.</p>

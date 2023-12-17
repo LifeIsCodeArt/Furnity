@@ -29,6 +29,20 @@ export const useMenuItemsStore = defineStore('MenuItemsStore', () => {
     },
   ])
 
+  const MenuItemsFooter = ref([
+    {
+      id:1,
+      name: 'Support'
+    },
+    {
+      id:2,
+      name: 'Privacy Policy'
+    },
+    {
+      id:3,
+      name: 'Terms and Conditions'
+    }])
 
-  return {MenuItems}
+
+  return {MenuItems,MenuItemsFooter}
 })

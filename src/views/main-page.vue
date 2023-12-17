@@ -6,20 +6,23 @@
 
   import {useCollectionItemsStore} from '@/stores/itemsStore.js'
   import {computed, ref} from "vue";
+  import TheFooter from "@/components/TheFooter.vue";
 
   const activeSection = ref(1)
   const itemsStore = useCollectionItemsStore()
 
   const benefitItems = computed(()=> itemsStore.benefitsCollection)
+
   const chairItems = computed(()=> itemsStore.chairCollectionItems)
-  const itemsCollections = computed(()=> itemsStore.menuTags)
   const firstChairItems = computed(()=>itemsStore.chairCollectionItems.filter((item) => item.id < 5));
+
+  const itemsCollections = computed(()=> itemsStore.menuTags)
 </script>
 
 <template>
 
-  <div class="min-w-[90rem] w-[90rem] h-auto centralMargin border-4 border-red-400">
-      <section class="bg-mainImage centralMargin h-[60rem] min-w-[90rem] bg-cover bg-right bg-no-repeat font-bold border-4 border-black">
+  <div class="min-w-[90rem] max-xl:w-0 w-[90rem] h-auto centralMargin border-4 border-red-400 max-xl:min-w-[69rem] max-lg:min-w-[49rem] max-sm:min-w-[39rem] border-4 border-blue-400">
+      <section class="bg-mainImage centralMargin h-[60rem] min-w-[90rem]  bg-cover bg-right bg-no-repeat font-bold border-4 border-black max-xl:min-w-[69rem] max-lg:min-w-[49rem] border border-green-400">
           <div class="mb-[7rem]">
               <TheHeader/>
           </div>
@@ -41,51 +44,51 @@
           </div>
       </section>
 
-      <section class="h-[52.5rem] min-w-[90rem] relative">
-          <div class="absolute top-[-35rem] left-5 flex justify-between w-full px-[7.5rem]">
+      <section class="h-[67.5rem] min-w-[90rem] relative max-xl:min-w-[69rem] max-lg:h-[84.5rem] max-lg:min-w-[49rem]  max-sm:min-w-[39rem]">
+          <div class="absolute top-[-30.5rem] left-5 grid grid-cols-4 gap-4 w-full px-[7.5rem] max-xl:px-[2.5rem] max-xl:left-0 ">
               <TheChair v-for="item in firstChairItems" :key="item.id" :item="item"/>
           </div>
-          <div class="mt-[20.5rem] flex justify-between px-[7.5rem]">
+          <div class="mt-[20.5rem] flex justify-between px-[7.5rem] max-xl:px-[2.5rem] max-lg:flex-col">
               <div class="grid grid-cols-2 gap-8">
                   <TheBenefits v-for="item in benefitItems" :key="item.id" :item="item"/>
                   <button class="w-44 h-14 bg-rose-500 rounded-3xl text-center text-white text-lg font-bold font-['Jost'] leading-10">
                       Start Shopping
                   </button>
               </div>
-              <div class="">
+              <div class="max-lg:mt-[3rem] max-lg:flex max-lg:items-center max-lg:justify-center">
                   <img src="../assets/images/white-chair.png" alt="" class="">
              </div>
 
           </div>
       </section>
-      <section class="min-w-[90rem]">
+      <section class="min-w-[90rem] max-xl:min-w-[69rem] max-lg:min-w-[49rem] border border-green-400">
 
           <div class="flex flex-col justify-center items-center">
 
-              <div class="max-w-[42rem] text-center text-zinc-900 text-5xl font-bold font-['Jost'] text-[3rem]">
+              <div class="w-[42rem] text-center text-zinc-900 text-5xl font-bold font-['Jost'] text-[3rem]">
                   Various collections of furniture to fill your interior
               </div>
 
-              <div class="max-w-[33.43rem] text-center text-zinc-900 text-opacity-70 text-lg font-normal font-['Jost'] mt-[1.2rem] mb-[3.7rem]">
+              <div class="w-[33.43rem] text-center text-zinc-900 text-opacity-70 text-lg font-normal font-['Jost'] mt-[1.2rem] mb-[3.7rem]">
                   We provide a variety of goods with the best quality for you to find the right one to meet your interior needs
               </div>
          </div>
       </section>
 
-      <section class="min-w-[90rem]">
-              <div class="flex flex-col justify-center items-center mb-[3.13rem]">
+      <section class="min-w-[90rem] max-xl:min-w-[69rem] max-lg:min-w-[49rem] border border-green-400">
+              <div class="flex flex-col justify-center items-center mb-[7.13rem] ">
                   <ul class="flex ">
                       <CollectionItem v-for="item in itemsCollections" :key="item.id" :tag="item"
                               :class="{'disabled:cursor-not-allowed text-white pointer-events-none bg-black font-semibold  pointer-events:none':activeSection === item.id,
                             'bg-inherit font-normal':activeSection !== item.id}" @click="activeSection = item.id"/>
                   </ul>
               </div>
-          <div class="grid gap-8 grid-cols-4 px-[9.1rem]">
+          <div class="grid gap-8 grid-cols-4 px-[7rem] max-xl:px-[2.5rem]">
               <TheChair v-for="item in chairItems" :key="item.id" :item="item"/>
           </div>
       </section>
 
-      <section class="min-w-[90rem] h-[37.62rem] bg-[#19191B] py-[4.37rem] px-[7.5rem] flex">
+      <section class="min-w-[90rem]  h-[37.62rem] bg-[#19191B] py-[4.37rem] px-[7.5rem] flex max-xl:min-w-[69rem] max-xl:px-[2.5rem] max-lg:min-w-[49rem] border border-green-400 ">
 
           <div class="my-[3.12rem] mr-[12.3rem]">
               <h1 class="text-[3rem] font-semibold leading-normal text-white">
@@ -132,7 +135,7 @@
 
       </section>
 
-      <section class="h-[37.6rem] flex justify-around items-center">
+      <section class="h-[37.6rem] px-0 flex justify-around items-center max-xl:justify-between max-xl:px-[2.5rem] border border-red-400">
           <div class="w-[45.43rem] text-[3rem] text-[#1D1F23] font-semiboldbold">
               Contact us if you need anything, we are ready to serve you
           </div>
@@ -141,6 +144,8 @@
               Find Product
           </button>
       </section>
+
+      <TheFooter/>
   </div>
 
 </template>
