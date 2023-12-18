@@ -10,14 +10,14 @@ const items = computed(()=> store.MenuItemsFooter)
 
 <template>
 
-  <div class="margin min-w-[90rem] bg-[#19191B] max-xl:min-w-[69rem] max-lg:min-w-[39rem] max-sm:min-w-[39rem] border border-green-400">
-    <div class="bg-inherit container w-[90rem] px-[2.5rem] flex items-center justify-between max-xl:min-w-[69rem] max-lg:min-w-[38.87rem] max-xl:left-0 max-xl:px-[2.5rem] 2xl:px-[7.5rem] max-sm:w-0">
+  <div class="margin min-w-[90rem] bg-[#19191B] max-xl:min-w-[69rem] max-lg:min-w-[39rem] max-sm:min-w-[37rem] max-mobileL:min-w-[20rem] ">
+    <div class="bg-inherit container w-[90rem] px-[2.5rem] flex items-center justify-between max-xl:min-w-[69rem] max-lg:min-w-[38.87rem] max-xl:left-0 max-xl:px-[2.5rem] 2xl:px-[7.5rem] max-sm:min-w-[36.87rem] max-mobileL:justify-center max-mobileL:min-w-[19.87rem] max-sm:w-0">
       <div class="flex justify-center items-center">
         <img src="@/assets/icons/Ellipse.png" alt="" class="mr-[0.5rem] w-[2.09rem] h-[1.125rem]">
         <p class="text-[1.125rem] text-[#1D1F23] leading-[3.75rem] tracking-[0.035rem] text-white font-oswald">Furnity.</p>
       </div>
       <nav class="">
-        <ul class="flex text-white w-[22rem] justify-between ">
+        <ul class="flex text-white w-[22rem] justify-between max-mobileL:hidden">
           <TheNavigation v-for="item in items" :key="item.id" :nav="item"></TheNavigation>
         </ul>
       </nav>
